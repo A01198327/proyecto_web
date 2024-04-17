@@ -1,0 +1,57 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+.header input {
+    margin-right: 10px;
+    border-radius: 15px;
+    padding: 5px;
+}
+.header button {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 30px;
+    transition: background-color 0.5s ease;  /* Add transition for smooth color change */
+}
+.header button:hover {
+    background-color: #ff7f00;  /* Change color on hover */
+}
+.content {
+    padding: 20px;
+    position: relative;
+}
+.image {
+    width: 100%;
+    height: auto;
+}
+.reports {
+    position: absolute;
+    top: 90px;
+    right: 130px;
+    font-size: 40px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+}
+.title {
+    position: absolute;
+    top: 90px;
+    left: 130px;
+    font-size: 40px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+}

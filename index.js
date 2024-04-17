@@ -38,12 +38,20 @@ async function llenarReportes() {
 }
 
 app.get('/', async (req, res) => {
+        res.render('index');
+});
+
+app.get('/dashboard', async (req, res) => {
+    res.render('dashboard');
+});
+
+app.get('/reportes', async (req, res) => {
     try {
         let reportesHTML = await llenarReportes();
-        res.render('index', {reportesHTML: reportesHTML});
+        res.render('reportes', {reportesHTML: reportesHTML});
     } catch (err) {
         console.error('Error:', err);
-        res.render('index', {reportesHTML: ""}); 
+        res.render('reportes', {reportesHTML: ""}); 
     }
 });
 

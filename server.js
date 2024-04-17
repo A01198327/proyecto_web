@@ -3,10 +3,10 @@ var sql = require('mssql');
 const config = {
     user: 'usuario',
     password: 'amogus',
-    server: 'localhost\\SQLEXPRESS', // Assuming SQL Server is running locally
+    server: 'localhost\\SQLEXPRESS', 
     database: 'WhirlCheck',
     options: {
-        trustServerCertificate: true // For self-signed certificates, if any
+        trustServerCertificate: true 
     }
 };
 

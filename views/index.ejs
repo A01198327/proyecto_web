@@ -1,43 +1,25 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="/css/style.css">
-        <meta charset="UTF-8">
-        <title>Datos de Reportes</title>
-    </head>
-    <body>
-    <header>
-        <h1>REPORTES: </h1>
-    </header>
-<main>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
 
-    <%- reportesHTML %>
-
-
-<form action=""></form>
-
-<div class="reporte">
-    <div class="half">
-        <h1>Electrodomesticos rotos en sucursal</h1>
-    <div class="informacion">
-            <h2>Reporte: ID01</h2>
-            <p>Fecha: 2024-04-02</p>
-            <p>Estado: Resuelto</p>
-        
-            <div class="Sucursal">
-                <p>Sucursal:Homedepot Revolucion</p>
-            </div>
+</head>
+<body>
+    <div class="header">
+        <div style="display: flex; justify-content: flex-end; align-items: center; width: 100%;">
+            <input type="text" placeholder="Usuario">
+            <input type="password" placeholder="Contraseña">
+            <button onclick="window.location.href='/dashboard'">Iniciar sesión</button>
         </div>
     </div>
-    <div class="half">
-        
+    <div class="content">
+        <div class="title">Report Admin</div>
+        <div class="reports">----- reportes</div>
+        <img class="image" src="images/Electrodomesticos.png" alt="Imagen de electrodomésticos">
     </div>
-</div>
-    
-</main>
-
-
-
-    </body>
+</body>
 </html>
-
