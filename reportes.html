@@ -1,82 +1,210 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <meta charset="UTF-8">
-        <title>Datos de Reportes</title>
-    </head>
-    <body>
-    <header>
-        <h1>REPORTES: </h1>
-    </header>
-<main>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background-color: #fff;
+    }
 
-<div class="reporte">
+    .header1 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 25px;
+      text-align: left;
+      color: black; 
+      margin-bottom: 20px;
+    }
 
-    <div class="half">
-        <h1>Electrodomesticos rotos en sucursal</h1>
+    .header2 {
+      text-align: right;
+      margin-bottom: 20px;
+    }
 
-    <div class="informacion">
-            <h2>Reporte: ID01</h2>
-            <p>Fecha: 2024-04-02</p>
-            <p>Estado: Resuelto</p>
-        
-            <div class="Sucursal">
-                <p>Sucursal:Homedepot Revolucion</p>
-            </div>
-        </div>
+    .grupo-filtros {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .fecha-group {
+      display: flex;
+    }
+
+    .fecha-group input[type="date"] {
+      flex: 1;
+      margin-right: 5px;
+    }
+
+    .separador {
+      margin: 0 5px;
+    }
+
+    .filtro-btn {
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .filtro-btn-gris {
+      background-color: #dbd6db; 
+    }
+
+    .filtro-btn-amarillo {
+      background-color: #EDAC09; 
+    }
+
+    .filtro-btn:hover {
+      background-color: #555; 
+    }
+
+    .contenedor-tabla {
+      overflow-x: auto; 
+      margin-top: 20px; /* Ajuste de margen superior */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #dbd6db;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #EDAC09; 
+      color: #fff;
+      text-align: center;
+    }
+
+    .input-fondo-gris {
+      background-color: #dbd6db;
+    }
+  </style>
+</head>
+<body>
+  <div class="header1">
+    <h1>Reportes</h1>
+  </div>
+  <div class="header2">
+    <h2>
+      <button type="button" class="filtro-btn filtro-btn-amarillo">Aplicar filtros</button>
+      <button type="submit" class="filtro-btn filtro-btn-gris"> Borrar filtros</button>
+    </h2> 
+  </div>
+  <form action="#">
+    <div class="grupo-filtros">
+      <label for="buscar">Buscar:</label>
+      <input type="text" id="buscar" name="buscar" placeholder="ID, palabras clave, etc." class="input-fondo-gris">
     </div>
 
-    <div class="half">
-        <img src="descarga.jpg" alt="">
-    </div>
-</div>
-
-<div class="reporte">
-
-    <div class="half">
-        <h1>Electrodomesticos rotos en sucursal</h1>
-
-    <div class="informacion">
-            <h2>Reporte: ID01</h2>
-            <p>Fecha: 2024-04-02</p>
-            <p>Estado: Resuelto</p>
-        
-            <div class="Sucursal">
-                <p>Sucursal:Homedepot Revolucion</p>
-            </div>
-        </div>
+    <div class="grupo-filtros">
+      <label for="tienda">Tienda:</label>
+      <select id="tienda" name="tienda" class="input-fondo-gris">
+        <option value="">Todas</option>
+        <option value="liverpool">Liverpool</option>
+        <option value="coppel">Coppel</option>
+        <option value="sears">Sears</option>
+        <option value="sariborns">Sariborns</option>
+      </select>
     </div>
 
-    <div class="half">
-        <img src="descarga.jpg" alt="">
-    </div>
-</div>
-
-<div class="reporte">
-
-    <div class="half">
-        <h1>Electrodomesticos rotos en sucursal</h1>
-
-    <div class="informacion">
-            <h2>Reporte: ID01</h2>
-            <p>Fecha: 2024-04-02</p>
-            <p>Estado: Resuelto</p>
-        
-            <div class="Sucursal">
-                <p>Sucursal:Homedepot Revolucion</p>
-            </div>
-        </div>
+    <div class="grupo-filtros">
+      <label for="sucursal">Sucursal:</label>
+      <select id="sucursal" name="sucursal" class="input-fondo-gris">
+        <option value="">Todas</option>
+        <option value="san_geronimo">San Geronimo</option>
+        <option value="paseo_la_fe">Paseo la Fe</option>
+        <option value="esfera">Esfera</option>
+        <option value="sun_mall">Sun Mall</option>
+        <option value="nuevo_sur">Nuevo Sur</option>
+        <option value="valle_soleado">Valle Soleado</option>
+      </select>
     </div>
 
-    <div class="half">
-        <img src="descarga.jpg" alt="">
+    <div class="grupo-filtros">
+      <label for="estatus">Estatus:</label>
+      <select id="estatus" name="estatus" class="input-fondo-gris">
+        <option value="">Todos</option>
+        <option value="resuelto">Resuelto</option>
+        <option value="en_espera">En espera</option>
+        <option value="asignado">Asignado</option>
+        <option value="rechazado">Rechazado</option>
+      </select>
     </div>
-</div>
-    
-</main>
 
+    <div class="grupo-filtros">
+      <label for="id_empleado">ID empleado:</label>
+      <input type="number" id="id_empleado" name="id_empleado" class="input-fondo-gris">
+    </div>
 
+    <div class="grupo-filtros">
+      <label for="fecha_inicio">Fechas:</label>
+      <div class="fecha-group">
+        <input type="date" id="fecha_inicio" name="fecha_inicio" class="input-fondo-gris">
+        <input type="date" id="fecha_fin" name="fecha_fin" class="input-fondo-gris">
+      </div>
+    </div>
+  </form>
 
-    </body>
+  <div class="contenedor-tabla">
+    <table>
+      <tr>
+        <th>ID Reporte</th>
+        <th>Estatus</th>
+        <th>Fecha</th>
+        <th>ID Empleado</th>
+        <th>ID Asignacion</th>
+        <th>Tienda</th>
+        <th>Sucursal</th>
+        <th>Titulo</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Pendiente</td>
+        <td>2024-04-18</td>
+        <td>1234</td>
+        <td>5678</td>
+        <td>Tienda 1</td>
+        <td>Sucursal A</td>
+        <td>Reporte de ventas</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Completo</td>
+        <td>2024-04-19</td>
+        <td>5678</td>
+        <td>1020</td>
+        <td>Tienda 2</td>
+        <td>Sucursal B</td>
+        <td>Reporte de inventario</td>
+      </tr>
+      
+    </table>
+  </div>
+</body>
 </html>
