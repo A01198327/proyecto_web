@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            padding: 0px;
+        }
+
+        .flecha {
+            margin-top: 30px;
+            margin-left: 10px;
+            padding: 5px;
+            width: 50px;
+            height: 30px;
+            background-color: transparent;
+        }
+
+        .flecha img {
+            width: 100%;
+            height: auto;
+        }
+
+        .perfil {
+            font-family: 'Nunito Sans';
+            font-size: 60px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            margin-bottom: 20px;
+            margin-left: 45px;
+        }
+
+        .logros {
+            font-family: 'Nunito Sans';
+            font-size: 60px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            margin-bottom: 20px;
+            position: absolute;
+            top: 68px;
+            left: 950px;
+        }
+
+        .cuadro1 {
+            width: 700px;
+            height: 500px;
+            background-color: #dbd6d6;
+            border-radius: 50px;
+            position: absolute;
+            top: 200px;
+            left: 20px;
+        }
+
+        .cuadro2 {
+            width: 700px;
+            height: 500px;
+            background-color: #dbd6d6;
+            border-radius: 50px;
+            position: absolute;
+            top: 200px;
+            left: 900px;
+        }
+
+        .nombre {
+            font-family: 'Nunito Sans';
+            font-size: 60px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            margin-bottom: 20px;
+            margin-left: 45px;
+        }
+
+        h2 {
+            font-family: 'Nunito Sans';
+            font-size: 30px;
+            text-align: left;
+            margin-bottom: 20px;
+            margin-left: 45px;
+        }
+
+        .num_rank {
+            font-family: 'Nunito Sans';
+            font-size: 30px;
+            text-align: left;
+            position: absolute;
+            left: 173px;
+            top: 105px;
+        }
+
+        .correo {
+            font-family: 'Nunito Sans';
+            font-size: 30px;
+            position: absolute;
+            left: 153px;
+            top: 165px;
+            text-align: left;
+        }
+
+        .puntos {
+            font-family: 'Nunito Sans';
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-left: 0px;
+        }
+
+        .reportes {
+            font-family: 'Nunito Sans';
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-left: 0px;
+            position: absolute;
+            top: 300px;
+            left: 50px;
+        }
+
+        .minigame {
+            font-family: 'Nunito Sans';
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-left: 0px;
+            position: absolute;
+            top: 300px;
+            left: 300px;
+        }
+
+        .total {
+            font-family: 'Nunito Sans';
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-left: 0px;
+            position: absolute;
+            top: 300px;
+            left: 550px;
+        }
+
+        footer {
+            background-color: #dbd7d7;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+        }
+
+        .contacto {
+            font-family: 'Nunito Sans';
+            font-size: 30px;
+            position: absolute;
+            top: -1px;
+            right: 1600px;
+        }
+
+        .mail {
+            font-family: 'Nunito Sans';
+            font-size: 30px;
+            position: absolute;
+            top: -1px;
+            right: 900px;
+        }
+
+        .numero {
+            font-family: 'Nunito Sans';
+            font-size: 30px;
+            position: absolute;
+            top: -1px;
+            right: 300px;
+        }
+
+        .m img {
+            width: 30px;
+            height: auto;
+            position: absolute;
+            top: 30px;
+            right: 960px;
+        }
+
+        .n img {
+            width: 30px;
+            height: auto;
+            position: absolute;
+            top: 30px;
+            right: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button class="flecha">
+            <img src="public/images/felcha.png" alt="">
+        </button>
+    </div>
+
+
+    <h1 class="perfil">Perfil</h1>
+    <h1 class="logros">Logros</h1>
+
+    <div class="cuadro1">
+        <h1 class="nombre">Nombre</h1>
+        <h2>Ranking: </h2>
+        <h2>Correo: </h2>
+
+        <p class="num_rank">#num_ranking</p>
+        <p class="correo">#correo</p>
+
+        <h2 class="puntos">Puntos</h2>
+
+        <div class="reportes">
+            <p><strong>Reportes: </strong></p>
+            <p>#puntos</p>
+        </div>
+        <div class="minigame">
+            <p><strong>Mini-Game: </strong></p>
+            <p>#puntos</p>
+        </div>
+        <div class="total">
+            <p><strong>Total: </strong></p>
+            <font color="#edac09">#puntos</font>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        
+    </div>
+</body>
+
+<footer>
+    <div class="barra">
+        <div>
+            <h2 class="contacto">Contacto</h2>
+        </div>
+        <div class="m">
+            <img src="public/images/correo.png" alt="">
+            <p class="mail">Mail</p>
+        </div>
+        <div class="n">
+            <img src="public/images/telefono.png" alt="">
+            <p class="numero">Numero</p>
+        </div>
+    </div>
+</footer>
+</html>
