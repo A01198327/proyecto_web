@@ -59,9 +59,15 @@
             height: 500px;
             background-color: #dbd6d6;
             border-radius: 50px;
-            position: absolute;
-            top: 200px;
-            left: 900px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 55%;
+        }
+
+        .cuadro2 img {
+            max-width: 75%;
+            max-height: 75%;
         }
 
         .nombre {
@@ -188,25 +194,6 @@
             position: absolute;
             top: 30px;
             right: 520px;
-        }
-
-        .cuadro2 {
-            display: flex;
-            justify-content: center; /* Centra horizontalmente */
-            align-items: center; /* Centra verticalmente */
-            height: 100vh; /* Opcional: ajusta la altura según tus necesidades */
-        }
-
-        .cuadro2 > div {
-            display: flex;
-            flex-direction: row;
-            max-width: 1200px; /* Ancho máximo del contenedor de las imágenes */
-            width: 100%; /* Ajusta al ancho del contenedor principal */
-        }
-
-        .cuadro2 img {
-            max-width: 75%; /* Ajusta el tamaño máximo de las imágenes */
-            height: auto; /* Mantiene la proporción de aspecto */
         }
     </style>
 </head>
