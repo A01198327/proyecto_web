@@ -189,6 +189,25 @@
             top: 30px;
             right: 520px;
         }
+
+        .cuadro2 {
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            height: 100vh; /* Opcional: ajusta la altura según tus necesidades */
+        }
+
+        .cuadro2 > div {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px; /* Ancho máximo del contenedor de las imágenes */
+            width: 100%; /* Ajusta al ancho del contenedor principal */
+        }
+
+        .cuadro2 img {
+            max-width: 75%; /* Ajusta el tamaño máximo de las imágenes */
+            height: auto; /* Mantiene la proporción de aspecto */
+        }
     </style>
 </head>
 
@@ -230,7 +249,12 @@
     </div>
 
     <div class="cuadro2">
-        
+        <div>
+            <img src="public/images/logro1.png" alt="logro1">
+            <img src="public/images/logro2.png" alt="logro2">
+            <img src="public/images/logro3.png" alt="logro3">
+            <img src="public/images/logro4.png" alt="logro4">
+        </div>
     </div>
 </body>
 
