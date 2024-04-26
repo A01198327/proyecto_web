@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .flecha {
+            margin-top: 30px;
+            margin-left: 10px;
+            padding: 5px;
+            width: 50px;
+            height: 30px;
+            background-color: transparent;
+        }
+
+        .flecha img {
+            width: 100%;
+            height: auto;
+        }
+
+        .ranking {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 70px;
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 50px;
+            margin-left: 45px;
+        }
+
+        .grupo-filtros {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            position: absolute;
+            top: 100px;
+            left: 600px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .input-fondo-gris {
+            background-color: #dbd6db;
+        }
+
+        .contenedor-tabla {
+            overflow-x: auto; 
+            margin-top: 20px; /* Ajuste de margen superior */
+        }
+
+        table {
+            width: 65%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #dbd6db;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #EDAC09; 
+            color: #fff;
+            text-align: center;
+        }
+
+        td {
+            background-color: #fff7f0;
+        }
+
+        .cuadro {
+            width: 400px;
+            height: 450px;
+            background-color: #dbd6d6;
+            border-radius: 50px;
+            position: absolute;
+            top: 200px;
+            left: 1150px;
+        }
+
+        h2 {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 30px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            margin-top: 40px;
+        }
+
+        .premio {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 20px;
+            text-align: left;
+            color: rgb(66, 60, 60);
+            margin-top: 60px;
+            margin-left: 30px;
+        }
+
+        footer {
+            background-color: #EDAC09;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <button class="flecha">
+            <img src="public/images/felcha.png" alt="flecha">
+        </button>
+    </div>
+    <div>
+        <h1 class="ranking">Ranking</h1>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Lugar</th>
+                <th>Nombre</th>
+                <th>Puntaje</th>
+                <th>ID Empleado</th>
+                <th>Correo</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Juan Gonzalez</td>
+                <td>200</td>
+                <td>#2940</td>
+                <td>juangzz@empresa.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Evaristo Lopez</td>
+                <td>175</td>
+                <td>#2434</td>
+                <td>evaristolpz@empresa.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Samantha Treviño</td>
+                <td>150</td>
+                <td>#2019</td>
+                <td>samtrevino@empresa.com</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Alejandra  Perez</td>
+                <td>130</td>
+                <td>#2174</td>
+                <td>alejandraprz@empresa.com</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Federico Rios</td>
+                <td>125</td>
+                <td>#2089</td>
+                <td>federios@empresa.com</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Cristina Delgado</td>
+                <td>120</td>
+                <td>#2435</td>
+                <td>cristinadlg@empresa.com</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Celso Martinez</td>
+                <td>100</td>
+                <td>#2346</td>
+                <td>celsomtz@empresa.com</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Eduardo Loera</td>
+                <td>88</td>
+                <td>#2542</td>
+                <td>eduloera@empresa.com</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Cristina Soto</td>
+                <td>56</td>
+                <td>#2984</td>
+                <td>cristinasoto@empresa.com</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Mario Adrian</td>
+                <td>50</td>
+                <td>#2723</td>
+                <td>marioadrian@empresa.com</td>
+            </tr>
+        </table>
+    </div>
+    <div class="grupo-filtros">
+        <label for="mes">Mes:</label>
+        <select id="mes" name="mes" class="input-fondo-gris">
+          <option value="">Todos</option>
+          <option value="Enero">Enero</option>
+          <option value="Febrero">Febrero</option>
+          <option value="Marzo">Marzo</option>
+          <option value="Abril">Abril</option>
+          <option value="Mayo">Mayo</option>
+          <option value="Junio">Junio</option>
+          <option value="Julio">Julio</option>
+          <option value="Agosto">Agosto</option>
+          <option value="Septiembre">Septiembre</option>
+          <option value="Octubre">Octubre</option>
+        </select>
+      </div>
+      <div class="cuadro">
+        <h2>Premios del Mes</h2>
+        <div class="premio">
+            <p>Primer Lugar: 500 pts en tienda de empleados</p>
+            <p>Segundo Lugar: 300 pts en tienda de empleados</p>
+            <p>Tercer Lugar: 100 pts en tienda de empleados</p>
+        </div>
+      </div>
+</body>
+<footer></footer>
+</html>
