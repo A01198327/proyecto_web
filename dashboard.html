@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/dashboard.css">
+</head>
+<body>
+    <div class="header">
+        <div style="display: flex; justify-content: flex-end; align-items: center; width: 100%;">
+            <text style="font-size: 20px; margin-right: 20px;">BIENVENIDO -------</text>
+        </div>
+    </div>
+    <div class="content">
+        <img class="image" src="./public/images/Fondo.png" alt="Imagen de electrodomésticos">
+        <div class="reports">
+            <button id="reportesButton">Visualizar reportes</button>
+            <script>
+                document.getElementById('reportesButton').addEventListener('click', function() {
+                    window.location.href = 'reportes.html';
+                });
+            </script>
+            <button id="rankingsButton">Visualizar rankings</button>
+            <script>
+                document.getElementById('rankingsButton').addEventListener('click', function() {
+                    window.location.href = 'rankings.html';
+                });
+            </script>
+            <button id="estadisticasButton">Visualizar estadísticas</button>
+            <script>
+                document.getElementById('estadisticasButton').addEventListener('click', function() {
+                    window.location.href = 'estadisticas.html';
+                });
+            </script>
+            <button id="perfilesButton">Perfiles reportados</button>
+            <script>
+                document.getElementById('perfilesButton').addEventListener('click', function() {
+                    window.location.href = 'perfiles.html';
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
