@@ -1,0 +1,12 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 55px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
