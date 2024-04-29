@@ -24,10 +24,10 @@ body {
     border: none;
     border-radius: 15px;
     padding: 8px 30px;
-    transition: background-color 0.5s ease;  /* Add transition for smooth color change */
+    transition: background-color 0.5s ease;  
 }
 .header button:hover {
-    background-color: #ff7f00;  /* Change color on hover */
+    background-color: #ff7f00;  
 }
 .content {
     padding: 20px;
@@ -40,7 +40,7 @@ body {
 .reports {
     position: absolute;
     top: 90px;
-    right: 130px;
+    right: 90px;
     font-size: 40px;
     color: #000;
     background-color: rgba(255, 255, 255, 0.7);

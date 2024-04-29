@@ -6,11 +6,22 @@
     <title>Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./public/css/dashboard.css">
+<style>
+.puntos {
+            font-family: 'Nunito Sans';
+            font-size: 2vw;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            margin-bottom: 20px;
+            margin-left: 45px;
+        }
+
+</style>
 </head>
 <body>
     <div class="header">
         <div style="display: flex; justify-content: flex-end; align-items: center; width: 100%;">
-            <text style="font-size: 20px; margin-right: 20px;">BIENVENIDO -------</text>
+            <text style="font-size: 20px; margin-right: 20px;">Bienvenido:  Empleado1</text>
         </div>
     </div>
     <div class="content">
@@ -26,12 +37,6 @@
             <script>
                 document.getElementById('rankingsButton').addEventListener('click', function() {
                     window.location.href = 'rankings.html';
-                });
-            </script>
-            <button id="estadisticasButton">Visualizar estadísticas</button>
-            <script>
-                document.getElementById('estadisticasButton').addEventListener('click', function() {
-                    window.location.href = 'estadisticas.html';
                 });
             </script>
             <button id="perfilesButton">Perfiles reportados</button>

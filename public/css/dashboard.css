@@ -46,6 +46,7 @@ body {
     margin-left: 100px;  
 }
 .reports button {
+    font-family: 'Nunito Sans';
     background-color: orange;
     color: white;
     border: none;
