@@ -1,7 +1,7 @@
 async function llenarReportes() {
     try {
         let reporteHTML = "";
-        const response = await fetch('http://localhost:5500/reportes');
+        const response = await fetch('http://40.233.21.29:5500/reportes');
         const data = await response.json();
         
         reporteHTML += "<div class='contenedor-tabla'>";
@@ -15,6 +15,7 @@ async function llenarReportes() {
         reporteHTML += "<th>Tienda</th>";
         reporteHTML += "<th>Sucursal</th>";
         reporteHTML += "<th>Titulo</th>";
+        reporteHTML += "<th>Funciones</th>";
         reporteHTML += "</tr>";
         
         data.data.forEach(record => {
@@ -36,6 +37,11 @@ async function llenarReportes() {
             reporteHTML += "<td>" + tienda + "</td>";
             reporteHTML += "<td>" + sucursal + "</td>";
             reporteHTML += "<td>" + titulo + "</td>";
+            reporteHTML += "<td>"; 
+            reporteHTML += `<button onclick='aceptar(${reporteID})'>aceptar</button>`;
+            reporteHTML += `<button onclick='rechazar(${reporteID})'>rechazar</button>`;
+            reporteHTML += `<button onclick='verImagen(${reporteID})'>ver imagen</button>`;
+            reporteHTML += "</td>";
             reporteHTML += "</tr>";
         });
         
@@ -47,6 +53,13 @@ async function llenarReportes() {
         console.error('Error:', err);
         return ""; 
     }
+}
+
+async function verImagen(IDReporte){
+    const response = await fetch(`http://40.233.21.29:5500/getImagenByReporteId?IdReporte=${IDReporte}`);
+    const data = await response.json();
+    let nombreImagen = data.data[0]['direccionImagen'];
+    window.open(`http://40.233.21.29:5500/uploads/${nombreImagen}`)
 }
 
 
@@ -78,6 +91,11 @@ async function llenarReportesFiltro() {
         reporteHTML += "<th>Tienda</th>";
         reporteHTML += "<th>Sucursal</th>";
         reporteHTML += "<th>Titulo</th>";
+        reporteHTML += "<th>"; 
+        reporteHTML += `<button onclick='aceptar(${IDReporte})'>aceptar</button>`;
+        reporteHTML += `<button onclick='rechazar(${IDReporte})'>rechazar</button>`;
+        reporteHTML += `<button onclick='verImagen(${IDReporte})'>ver imagen</button>`;
+        reporteHTML += "</th>";
         reporteHTML += "</tr>";
 
         data.data.forEach(record => {
